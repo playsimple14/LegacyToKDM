@@ -1,0 +1,5 @@
+antlr4-python3-runtime
+pydantic
+google-genai
+tree_sitter
+tree_sitter_language_pack
