@@ -1,0 +1,30 @@
+[
+  {
+    "name": "sample",
+    "source": "multi_agent_kdm/sample.cbl",
+    "expected": {
+      "program_id": "SAMPLE",
+      "data_items": ["WS-NAME", "WS-COUNT"],
+      "paragraphs": ["MAIN-LINE"],
+      "calls": [],
+      "reads": ["WS-COUNT", "WS-NAME"],
+      "writes": ["DISPLAY"],
+      "computes": [],
+      "business_rule_count": 1
+    }
+  },
+  {
+    "name": "paragraph-calls-and-compute",
+    "source": "evaluation/cases/paragraph_calls.cbl",
+    "expected": {
+      "program_id": "PAYMENT",
+      "data_items": ["WS-AMOUNT", "WS-TOTAL"],
+      "paragraphs": ["MAIN-LINE", "CALCULATE"],
+      "calls": ["CALCULATE"],
+      "reads": ["WS-AMOUNT"],
+      "writes": ["DISPLAY"],
+      "computes": ["WS-TOTAL"],
+      "business_rule_count": 2
+    }
+  }
+]

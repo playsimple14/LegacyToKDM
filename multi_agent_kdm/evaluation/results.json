@@ -1,0 +1,145 @@
+{
+  "case_count": 2,
+  "results": [
+    {
+      "name": "sample",
+      "predicted": {
+        "program_id": "SAMPLE",
+        "data_items": [
+          "WS-NAME",
+          "WS-COUNT"
+        ],
+        "paragraphs": [
+          "MAIN-LINE"
+        ],
+        "calls": [],
+        "reads": [
+          "WS-NAME",
+          "WS-COUNT"
+        ],
+        "writes": [
+          "DISPLAY",
+          "DISPLAY",
+          "DISPLAY"
+        ],
+        "computes": [],
+        "business_rule_count": 1
+      },
+      "scores": {
+        "data_items": {
+          "f1": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "paragraphs": {
+          "f1": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "calls": {
+          "f1": 1.0,
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "reads": {
+          "f1": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "writes": {
+          "f1": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "computes": {
+          "f1": 1.0,
+          "true_positive": 0,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "business_rule_count": {
+          "expected": 1,
+          "predicted": 1,
+          "exact": true
+        }
+      }
+    },
+    {
+      "name": "paragraph-calls-and-compute",
+      "predicted": {
+        "program_id": "PAYMENT",
+        "data_items": [
+          "WS-AMOUNT",
+          "WS-TOTAL"
+        ],
+        "paragraphs": [
+          "MAIN-LINE",
+          "CALCULATE"
+        ],
+        "calls": [
+          "CALCULATE"
+        ],
+        "reads": [
+          "WS-TOTAL",
+          "WS-AMOUNT"
+        ],
+        "writes": [
+          "DISPLAY",
+          "DISPLAY"
+        ],
+        "computes": [
+          "WS-TOTAL"
+        ],
+        "business_rule_count": 2
+      },
+      "scores": {
+        "data_items": {
+          "f1": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "paragraphs": {
+          "f1": 1.0,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "calls": {
+          "f1": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "reads": {
+          "f1": 0.667,
+          "true_positive": 1,
+          "false_positive": 1,
+          "false_negative": 0
+        },
+        "writes": {
+          "f1": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "computes": {
+          "f1": 1.0,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 0
+        },
+        "business_rule_count": {
+          "expected": 2,
+          "predicted": 2,
+          "exact": true
+        }
+      }
+    }
+  ]
+}

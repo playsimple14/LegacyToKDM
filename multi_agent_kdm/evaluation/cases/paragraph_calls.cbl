@@ -1,0 +1,16 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PAYMENT.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-AMOUNT PIC 9(5)V99 VALUE 100.00.
+       01  WS-TOTAL  PIC 9(5)V99 VALUE 0.
+       PROCEDURE DIVISION.
+       MAIN-LINE.
+           PERFORM CALCULATE.
+           DISPLAY WS-TOTAL.
+           STOP RUN.
+       CALCULATE.
+           COMPUTE WS-TOTAL = WS-AMOUNT * 2.
+           IF WS-AMOUNT > 0
+               DISPLAY 'VALID'
+           END-IF.
